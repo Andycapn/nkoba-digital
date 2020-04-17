@@ -1,34 +1,37 @@
 .above-fold {
   display: flex;
   flex-direction: row;
-  height: 60vh;
 }
 
 .hero-area {
-  margin-top: 8vh;
   padding: 0.5rem calc((100vw - 1366px) / 2);
   display: grid;
   grid-template-columns: 1fr;
-  max-width: calc((100vh));
+  max-width: 100vw;
 }
 
 .hero-text,
 .cta-area {
   grid-column: 1/1;
-  margin-top: 32px;
+  margin-top: 22px;
 }
 
 .hero-h1 {
   font-size: 55px;
   font-family: "Montserrat", sans-serif;
+  padding: 1rem;
 }
 
 .hero-text {
   text-align: center;
   font-family: "Athiti", sans-serif;
-  margin-left: -15em;
+  margin-left: -5em;
 }
 
 .hero-image {
-
+  position: relative;;
+  top: 100px;
+  right: 100px;
+  width: 700px;
+  height: 700px;
 }

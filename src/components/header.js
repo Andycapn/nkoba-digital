@@ -11,7 +11,7 @@ const NavLink = styled(Link)`
   font-weight: normal;
   line-height: 1;
   margin: 0 0.5rem 0 0;
-  padding: 0.25rem;
+  padding: .7rem;
   text-decoration: none;
   font-family: sans-serif;
   
@@ -25,7 +25,7 @@ const Header = () => {
     <header
       css={css`
           width: 100%;
-          background-color: #eee;
+          background-color: white;
           border-bottom: 1px solid #ddd;
           display: flex;
           justify-content: space-between;
