@@ -31,7 +31,18 @@
 .hero-image {
   position: relative;;
   top: 100px;
-  right: 100px;
+  right: 200px;
   width: 700px;
   height: 700px;
+}
+
+.container {
+  padding: 0.5rem calc((100vw - 1366px) / 2);
+  margin-top: 20vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container > aside {
+  grid-column: 2/3;
 }
