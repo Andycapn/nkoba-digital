@@ -24,9 +24,9 @@ const Button = styled.button`
   }
 `
 
-const Cta = () => {
-  return(
-    <div className={'cta-area'} css={css`
+const CallToAction = () => {
+  return (
+    <div className={"cta-area"} css={css`
     border-radius: 5px;
     box-shadow: 0px 3px 8px rgba(0,0,0,0.16);
     max-width: 415px;
@@ -35,8 +35,9 @@ const Cta = () => {
     flex-direction: column;
     align-items: center;
 `}>
-      <p style={{fontFamily: '\'Athiti\', sans-serif',
-                 fontWeight: 'bold',
+      <p style={{
+        fontFamily: "'Athiti', sans-serif",
+        fontWeight: "bold",
                  textAlign: 'center'}}>
         For a Free and Comprehensive consultation, Call us today on <br/> +260 73055732 or Email us at nkoba.digital@gmail.com
       </p>
@@ -46,4 +47,4 @@ const Cta = () => {
 
 }
 
-export default Cta
+export default CallToAction

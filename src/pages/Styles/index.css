@@ -1,13 +1,21 @@
+h1, h2, h3 {
+    font-family: "Montserrat", sans-serif;
+}
+
+p {
+    font-family: "Athiti", sans-serif;
+}
+
 .above-fold {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .hero-area {
-  padding: 0.5rem calc((100vw - 1366px) / 2);
-  display: grid;
-  grid-template-columns: 1fr;
-  max-width: 100vw;
+    padding: 0.5rem calc((100vw - 1366px) / 2);
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 100vw;
 }
 
 .hero-text,
