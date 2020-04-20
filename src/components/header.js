@@ -35,6 +35,7 @@ const Header = () => {
           min-height: 7vh;
           max-height: 7vh;
           margin-bottom: 1rem;
+          z-index: +1;
        `}
     >
       <NavLink to="/"><NkobaLogo/></NavLink>

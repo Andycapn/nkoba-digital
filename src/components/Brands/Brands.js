@@ -11,6 +11,7 @@ const Brands = () => {
         background-color: #f2f2f2;
         height: 40vh;
         padding: 0.5rem calc((100vw - 1366px) / 2);
+        z-index: -1;
       `}
     >
       <h3 style={{ textAlign: "center", marginTop: "32px" }}>The Brands.</h3>
@@ -21,7 +22,6 @@ const Brands = () => {
         css={css`
           display: flex;
           justify-content: center;
-          z-index: -1;
         `}
       >
         <LvLoan/>

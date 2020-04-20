@@ -21,6 +21,7 @@ const Button = styled.button`
   
   :active {
     box-shadow: none;
+    color: #24231F;
   }
 `
 

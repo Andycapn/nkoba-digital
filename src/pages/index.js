@@ -72,7 +72,6 @@ const IndexPage = () => (
         />
       </section>
       <Brands/>
-      <LearnMore/>
     </>
   </Layout>
 )
