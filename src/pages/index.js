@@ -8,6 +8,8 @@ import nkobaWarrior from "../images/SVG/Asset 4.svg"
 import { css } from "@emotion/core"
 import ServiceItem from "../components/service-item/serviceItem"
 import icons from "../components/service-item/icons"
+import Brands from "../components/Brands/Brands"
+import LearnMore from "../components/learnMore/learnMore"
 
 console.log(icons.costIcon)
 
@@ -64,10 +66,13 @@ const IndexPage = () => (
             height: 609px;
             position: relative;
             grid-row: 1/2;
+            z-index: -1;
           `}
           alt=""
         />
       </section>
+      <Brands/>
+      <LearnMore/>
     </>
   </Layout>
 )

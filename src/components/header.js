@@ -24,6 +24,7 @@ const Header = () => {
   return (
     <header
       css={css`
+          position: fixed;
           width: 100%;
           background-color: white;
           border-bottom: 1px solid #ddd;

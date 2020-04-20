@@ -1,0 +1,13 @@
+.learn-more {
+    height: 587px;
+    background-color: #24231F;
+    background-image: url("../../images/SVG/the-honest.png");
+    background-position: center;
+    opacity: 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 165px calc((100vw - 1366px) / 2);
+    color: #F2F2F2;
+    font-family: "Athiti", sans-serif;
+}
+
