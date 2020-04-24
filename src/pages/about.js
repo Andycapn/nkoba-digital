@@ -20,6 +20,9 @@ const About = () => (
         h2 {
           font-size: 24px;
         }
+        
+        margin-top: 8vh;
+        padding: 0.5rem calc((100vw - 330px)/2);
 
         @media only screen and (min-width: 960px) {
           padding: 0.5rem calc((100vw - 1366px) / 2);
@@ -27,6 +30,9 @@ const About = () => (
           margin-bottom: 2vh;
           display: grid;
           grid-template-columns: 2fr 1fr;
+          p, h2{
+            text-align: unset;
+          }
           .warrior-image {
             display: grid;
           }
