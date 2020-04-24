@@ -1,51 +1,71 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { css }  from "@emotion/core"
+import { css } from "@emotion/core"
 
-const Button = styled.button`
+const Button = styled.a`
   border: none;
   border-radius: 5px;
-  box-shadow: 0px 3px 8px rgba(0,0,0,0.16);
-  background-color: #F2F2F2;
-  font-family: 'Athiti', sans-serif;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.16);
+  background-color: #f2f2f2;
+  font-family: "Athiti", sans-serif;
   font-weight: bold;
   max-width: 214px;
   max-height: 230px;
   padding: 0.5rem 2rem;
   cursor: pointer;
-  transition: ease .2s;
-  
+  transition: ease 0.2s;
+  text-decoration: none;
+  color: #24231F;
+
   :focus {
     outline: none;
   }
-  
+
   :active {
     box-shadow: none;
-    color: #24231F;
+    color: #24231f;
   }
 `
 
 const CallToAction = () => {
   return (
-    <div className={"cta-area"} css={css`
-    border-radius: 5px;
-    box-shadow: 0px 3px 8px rgba(0,0,0,0.16);
-    max-width: 415px;
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`}>
-      <p style={{
-        fontFamily: "'Athiti', sans-serif",
-        fontWeight: "bold",
-                 textAlign: 'center'}}>
-        For a Free and Comprehensive consultation, Call us today on <br/> +260 73055732 or Email us at nkoba.digital@gmail.com
+    <div
+      className={"cta-area"}
+      css={css`
+        border-radius: 5px;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.16);
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        @media only screen and (min-width: 1224px) {
+          max-width: 415px;
+        }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+          max-width: 415px;
+          margin: 2rem auto;
+        }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 415px;
+        }
+      `}
+    >
+      <p
+        style={{
+          fontFamily: "'Athiti', sans-serif",
+          fontWeight: "bold",
+          textAlign: "center",
+        }}
+      >
+        For a Free and Comprehensive consultation, Call us today on <br /> +260
+        73055732 or Email us at nkoba.digital@gmail.com
       </p>
-      <Button>Call Now</Button>
+      <Button href="tel:+26073055732">Call Now</Button>
     </div>
   )
-
 }
 
 export default CallToAction

@@ -1,22 +1,57 @@
 import * as React from "react"
-import "./learnMore.css"
 import styled from "@emotion/styled"
+import { css } from "@emotion/core"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 
-const Button = styled.button`
+const ImageBackground = styled(BackgroundImage)`
+  background-color: #24231f;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+`
+
+
+const Button = styled(Link)`
   border: none;
+  background-color: #f2f2f2;
   border-radius: 5px;
-  padding: .5rem 3rem;
-  box-shadow: 0px 3px 8px rgba(0,0,0,0.16);
+  padding: 0.5rem 3rem;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.16);
   margin: 0 16px 0 16px;
   cursor: pointer;
-  transition: ease-in-out .1s;
+  transition: ease-in-out 0.1s;
   font-family: "Athiti", sans-serif;
   font-weight: bold;
+  text-decoration: none;
+  color: #24231F;
 `
 
 const LearnMore = () => {
+  const { image } = useStaticQuery(graphql`
+      query {
+          image: file(relativePath: { eq: "pattern.png" }) {
+              sharp: childImageSharp {
+                  fluid{
+                      ...GatsbyImageSharpFluid_withWebp
+                  }
+              }
+          }
+      }
+  `)
+
   return (
-    <div className="learn-more">
+    <ImageBackground
+      tag="section"
+      fluid={image.sharp.fluid}
+      css={css`
+        height: 587px;
+        max-height: 587px;
+        padding: 165px calc((100vw - 1366px) / 2);
+        color: #f2f2f2;
+        font-family: "Athiti", sans-serif;
+      `}
+    >
       <p style={{ fontWeight: "bold", textAlign: "center", fontSize: "16px" }}>
         With the ever growing presence of Social Media in our day to day lives,{" "}
         <br/>
@@ -28,10 +63,10 @@ const LearnMore = () => {
       </p>
       <p style={{ textAlign: "center" }}>Contact us or learn more</p>
       <section style={{ display: "flex", justifyContent: "center" }}>
-        <Button>Contact Us</Button>
-        <Button>Learn More</Button>
+        <Button to="/contact">Contact Us</Button>
+        <Button to="/services">Learn More</Button>
       </section>
-    </div>
+    </ImageBackground>
   )
 }
 

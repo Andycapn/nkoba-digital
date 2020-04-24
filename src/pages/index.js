@@ -6,17 +6,17 @@ import CallToAction from "../components/call-to-action/call-to-action"
 import nkobaHead from "../images/nkoba-head.svg"
 import nkobaWarrior from "../images/SVG/Asset 4.svg"
 import { css } from "@emotion/core"
-import ServiceItem from "../components/service-item/serviceItem"
-import icons from "../components/service-item/icons"
+import ServiceItem from "../components/serviceItem"
+import icons from "../components/icons"
 import Brands from "../components/Brands/Brands"
-import LearnMore from "../components/learnMore/learnMore"
 
-console.log(icons.costIcon)
+const IndexPage = () => {
 
-const IndexPage = () => (
+
+  return (
   <Layout>
-    <>
       <SEO title="Home"/>
+      <main className="index-main">
       <section className={"above-fold"}>
         <section className={"hero-area"}>
           <h1 className={"hero-h1"}>
@@ -34,6 +34,7 @@ const IndexPage = () => (
       <section className="container">
         <aside className="offer-area">
           <h2
+            className="sub-heading"
             css={css`
               font-size: 32px;
               font-weight: bold;
@@ -41,7 +42,7 @@ const IndexPage = () => (
           >
             Conquer your competition with marketing that works
           </h2>
-          <p>
+          <p className="sub-heading">
             We do more than just Visual Branding & Social Marketing. We can help
             with the <br/> design & development of your new Idea, Product or
             service launch.
@@ -62,18 +63,22 @@ const IndexPage = () => (
         <img
           src={nkobaWarrior}
           css={css`
+            display: none;
+            @media only screen and (min-width: 1224px) {
+            display: grid;
             width: 476px;
             height: 609px;
             position: relative;
             grid-row: 1/2;
             z-index: -1;
+            }
           `}
           alt=""
         />
       </section>
-      <Brands/>
-    </>
+        <Brands/>
+      </main>
   </Layout>
-)
+)}
 
 export default IndexPage

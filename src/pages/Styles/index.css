@@ -10,7 +10,6 @@ p {
 }
 
 .hero-h1 {
-  margin-top: 8vh;
   text-align: center;
 }
 
@@ -18,13 +17,25 @@ p {
   display: none;
 }
 
-main {
-  padding: 0.5rem calc((100vw - 480px) / 2);
+.index-main {
+  margin-top: 8vh;
+  padding: 0.5rem calc((100vw - 415px) / 2);
 }
 
-@media only screen and (min-width: 960px) {
-  main {
-    padding: 0;
+@media (min-width: 600px) {
+  .index-main{
+    padding: 0.5rem calc((100vw - 560px) / 2);
+  }
+  .hero-text{
+    text-align: center;
+  }
+}
+
+
+
+@media only screen and (min-width: 1224px) {
+  .index-main {
+    padding: 0.5rem calc((100vw - 1190px) / 2);
   }
 
   h1,
@@ -44,9 +55,12 @@ main {
   }
 
   .hero-area {
-    margin-top: 16vh;
+    margin-top: 0;
     display: grid;
-    padding: 0.5rem calc((100vw - 1366px) / 2);
+  }
+
+  .hero-text{
+    text-align: unset;
   }
 
   .hero-text,
@@ -63,22 +77,18 @@ main {
     margin-top: unset;
   }
 
-  .hero-text {
-  }
-
   .hero-image {
     display: grid;
     grid-column: 2/3;
     position: relative;
     top: 16vh;
-    right: 200px;
-    width: 700px;
-    height: 700px;
+    right: 100px;
+    width: 500px;
+    height: 500px;
     z-index: -1;
   }
 
   .container {
-    padding: 0.5rem calc((100vw - 1366px) / 2);
     margin-top: 20vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -86,5 +96,16 @@ main {
 
   .container > aside {
     grid-column: 2/3;
+  }
+}
+
+@media (min-width: 1400px) {
+  .index-main{
+    padding: 0.5rem calc((100vw - 1370px) / 2);
+  }
+
+  .hero-image{
+    width: 700px;
+    height: 700px;
   }
 }

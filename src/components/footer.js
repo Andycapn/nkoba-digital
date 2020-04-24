@@ -2,6 +2,7 @@ import * as React from "react"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
+import icons from "./icons"
 
 const FooterLink = styled(Link)`
   color: #f2f2f2;
@@ -15,7 +16,7 @@ const FooterLink = styled(Link)`
   font-family: sans-serif;
 `
 
-const FooterItem = styled.p`
+const ExternalLink = styled.a`
   color: #f2f2f2;
   font-family: "Athiti", sans-serif;
   font-size: 14px;
@@ -25,49 +26,104 @@ const FooterItem = styled.p`
   padding: 0.7rem;
   text-decoration: none;
   font-family: sans-serif;
+  @media (min-width: 998px) {
+    font-size: 12px;
+    line-height: 1;
+  }
+  
+  @media (min-width: 1400px) {
+    font-size: 14px;
+  }
 `
 
 const Footer = () => {
   return (
     <footer
       css={css`
-        @media only screen and (min-width: 960px) {
+        background-color: #555555;
+        padding: 2rem calc((100vw - 1366px) / 2);
+        color: #f2f2f2;
+
+        @media only screen and (min-width: 800px) {
           padding: 2rem calc((100vw - 1366px) / 2);
           background-color: #555555;
-          height: 200px;
+          height: 250px;
           display: grid;
-          grid-template-columns: 1fr 1fr 2fr 1fr;
-          color: #f2f2f2;
+          grid-template-columns: 1fr 0.5fr 2fr 1fr;
+          grid-template-rows: 3fr 1fr;
           overflow: hidden;
+        }
+
+        @media (min-width: 998px) {
+          padding: 0.5rem calc((100vw - 900px) / 2);
+        }
+        
+        @media (min-width: 1400px) {
+          padding: 2rem calc((100vw - 1366px) / 2);
         }
       `}
     >
-      <section
+      <ul
         css={css`
           grid-column: 1/2;
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          list-style: none;
+          line-height: 1;
         `}
       >
-        <FooterLink>About us</FooterLink>
-        <FooterLink>Services</FooterLink>
-        <FooterLink>Contact Us</FooterLink>
-      </section>
-      <section
+        <li>
+          <FooterLink to="/">Home</FooterLink>
+        </li>
+        <li>
+          <FooterLink to="/about">About us</FooterLink>
+        </li>
+        <li>
+          <FooterLink to="/services">Services</FooterLink>
+        </li>
+        <li>
+          <FooterLink to="/contact">Contact Us</FooterLink>
+        </li>
+      </ul>
+      <ul
         css={css`
           grid-column: 2/3;
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          list-style: none;
+          line-height: 1;
         `}
       >
-        <FooterLink>Facebook</FooterLink>
-        <FooterLink>Twitter</FooterLink>
-        <FooterLink>Instagram</FooterLink>
-      </section>
+        <li style={{ display: "flex", alignItems: "center" }}>
+          <img
+            style={{ width: "25px", height: "25px", marginBottom: "0" }}
+            src={icons.facebookIcon}
+            alt=""
+          />
+          <ExternalLink
+            href="https://www.facebook.com/Nkoba.Digital/"
+            target="_blank"
+          >
+            Facebook
+          </ExternalLink>
+        </li>
+        <li style={{ display: "flex", alignItems: "center" }}>
+          <img
+            style={{ width: "25px", height: "25px", marginBottom: "0" }}
+            src={icons.instagramIcon}
+            alt=""
+          />
+          <ExternalLink href="#">instagram</ExternalLink>
+        </li>
+        <li style={{ display: "flex", alignItems: "center" }}>
+          <img
+            style={{ width: "25px", height: "25px", marginBottom: "0" }}
+            src={icons.twitterIcon}
+            alt=""
+          />
+          <ExternalLink href="#">Twitter</ExternalLink>
+        </li>
+      </ul>
       <section
         css={css`
           grid-column: 3/4;
@@ -75,9 +131,22 @@ const Footer = () => {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          @media (min-width: 998px) {
+          }
         `}
       >
-        <p>Subscribe to our Newsletter for exclusive offers</p>
+        <p
+          css={css`
+            @media (min-width: 998px) {
+              font-size: 12px;
+            }
+            @media (min-width: 1400px) {
+              font-size: 16px;
+            }
+          `}
+        >
+          Subscribe to our Newsletter for exclusive offers
+        </p>
         <form
           css={css`
             display: flex;
@@ -93,8 +162,9 @@ const Footer = () => {
               font-weight: 500;
               padding: 0.5rem;
               width: 263px;
+              border: none;
             `}
-            type="text"
+            type="email"
             placeholder="Email Address"
           />
           <button
@@ -111,19 +181,59 @@ const Footer = () => {
           </button>
         </form>
       </section>
-      <section
+      <ul
         css={css`
           grid-column: 4/5;
+          line-height: 1;
+          list-style: none;
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center;
         `}
       >
-        <FooterItem>225/01 New Ng’ombe</FooterItem>
-        <FooterItem>+26097 3055732</FooterItem>
-        <FooterItem>nkoba.digital@gmail.com</FooterItem>
-      </section>
+        <li style={{ display: "flex", alignItems: "center" }}>
+          <img
+            style={{ width: "25px", height: "25px", marginBottom: "0" }}
+            src={icons.mapIcon}
+            alt=""
+          />
+          <ExternalLink
+            href="https://www.google.com/maps/search/225%2F01+New+Ng%E2%80%99ombe/@-15.375042,28.3115382,15z/data=!3m1!4b1"
+            target="_blank"
+          >
+            225/01 New Ng’ombe
+          </ExternalLink>
+        </li>
+        <li style={{ display: "flex", alignItems: "center" }}>
+          <img
+            style={{ width: "25px", height: "25px", marginBottom: "0" }}
+            src={icons.callIcon}
+            alt=""
+          />
+          <ExternalLink href="tel:+260973055732">+26097 3055732</ExternalLink>
+        </li>
+        <li style={{ display: "flex", alignItems: "center" }}>
+          <img
+            style={{ width: "25px", height: "25px", marginBottom: "0" }}
+            src={icons.emailIcon}
+            alt=""
+          />
+          <ExternalLink href="mailto:nkoba.digital@gmail.com">
+            nkoba.digital@gmail.com
+          </ExternalLink>
+        </li>
+      </ul>
+      <p
+        css={css`
+          grid-row: 2/3;
+          grid-column: 1/5;
+          font-size: 14px;
+          text-align: center;
+        `}
+      >
+        &copy; Nkoba Digital {new Date().getFullYear()}. Design by Andrew
+        Ndhlovu, Axon Zambia.
+      </p>
     </footer>
   )
 }
