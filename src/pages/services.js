@@ -34,6 +34,8 @@ const Services = () => {
         tag="section"
         fluid={image.sharp.fluid}
         css={css`
+          margin-top: 8vh;
+          padding: 0.5rem calc((100vw - 345px) / 2);
           @media only screen and (min-width: 960px) {
             padding: 0.5rem calc((100vw - 1366px) / 2);
             margin-top: 13vh;
