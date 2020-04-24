@@ -19,7 +19,21 @@ p {
 
 .index-main {
   margin-top: 8vh;
+  padding: 0.5rem calc((100vw - 345px) / 2);
+}
+
+.hero-text{
+  text-align: center;
+}
+
+.sub-heading{
+  text-align: center;
+}
+
+@media screen and (min-width: 415px) {
+  .index-main{
   padding: 0.5rem calc((100vw - 415px) / 2);
+  }
 }
 
 @media (min-width: 600px) {
