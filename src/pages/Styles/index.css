@@ -45,6 +45,8 @@ p {
   }
 }
 
+
+/* Small Laptop View CSS */
 @media only screen and (min-width: 1024px) {
   .index-main{
     padding: 0.5rem calc((100vw - 890px)/2);
@@ -76,11 +78,13 @@ p {
 
   .hero-text{
     text-align: center;
+    font-size: 17px;
+    line-height: 1.5;
   }
 
 
   .container {
-    margin-top: 20vh;
+    margin-top: 10vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -94,8 +98,7 @@ p {
     font-size: 16px;
   }
 }
-
-
+/* Medium Sized Laptop */
 @media only screen and (min-width: 1224px) {
   .index-main {
     padding: 0.5rem calc((100vw - 1190px) / 2);
@@ -161,6 +164,8 @@ p {
     grid-column: 2/3;
   }
 }
+
+/* High DPI Laptop view CSS */
 
 @media (min-width: 1400px) {
   .index-main{
