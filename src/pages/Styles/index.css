@@ -60,9 +60,9 @@ p {
     grid-column: 2/3;
     position: relative;
     top: 10vh;
-    left: 25px;
-    width: 380px;
-    height: 380px;
+    left: 27px;
+    width: 360px;
+    height: 360px;
   }
 
   .above-fold > .cta-area{
@@ -71,7 +71,6 @@ p {
   }
 
   .hero-h1{
-    text-align: unset;
     font-size: 40px;
   }
 

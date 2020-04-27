@@ -15,7 +15,10 @@ const Button = styled.a`
   cursor: pointer;
   transition: ease 0.2s;
   text-decoration: none;
-  color: #24231F;
+  color: #24231f;
+  @media screen and (min-width: 1024px){
+    font-size: 17px;
+  }
 
   :focus {
     outline: none;
@@ -39,26 +42,33 @@ const CallToAction = () => {
         flex-direction: column;
         align-items: center;
         margin-bottom: 2rem;
-        @media only screen and (min-width: 1224px) {
-          max-width: 415px;
-        }
-        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-          max-width: 415px;
-          margin: 2rem auto;
-        }
+        max-width: 415px;
         @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
           margin-left: auto;
           margin-right: auto;
-          max-width: 415px;
+        }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+          margin: 2rem auto;
+        }
+
+        @media screen and (min-width: 1024px) {
+          margin: 2rem auto;
+        }
+
+        @media only screen and (min-width: 1224px) {
+          margin: 2rem auto;
         }
       `}
     >
       <p
-        style={{
-          fontFamily: "'Athiti', sans-serif",
-          fontWeight: "bold",
-          textAlign: "center",
-        }}
+        css={css`
+          font-family: "Athiti", sans-serif;
+          font-weight: bold;
+          text-align: center;
+          @media screen and (min-width: 1024px){
+            font-size: 17px;
+          }
+        `}
       >
         For a Free and Comprehensive consultation, Call us today on <br /> +260
         73055732 or Email us at nkoba.digital@gmail.com
