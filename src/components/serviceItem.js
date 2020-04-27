@@ -22,8 +22,13 @@ const ServiceItem = props => {
             width: 45px;
           }
           @media screen and (min-width: 1224px) {
-            max-height: 52px;
-            max-width: 52px;
+            height: 52px;
+            width: 52px;
+          }
+          
+          @media screen and (min-width: 1440px){
+            height: 52px;
+            width: 52px;
           }
         `}
         src={props.icon}
@@ -34,6 +39,9 @@ const ServiceItem = props => {
           @media screen and (min-width: 1024px) {
             font-size: 14px;
             line-height: 1.4;
+          }
+          @media screen and  (min-width: 1440px){
+            font-size: 20px;
           }
         `}
       >

@@ -71,13 +71,13 @@ const Header = () => {
         // styling for medium laptops
 
         @media screen and (min-width: 1224px) {
-          padding: 0.5rem calc((100vw - 1224px) / 2);
+          padding: 0.5rem calc((100vw - 1100px) / 2);
         }
 
         // styling for medium laptops
 
         @media screen and (min-width: 1440px) {
-          padding: 0.5rem calc((100vw - 1366px) / 2);
+          padding: 0.5rem calc((100vw - 1300px) / 2);
         }
       `}
     >

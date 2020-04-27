@@ -101,7 +101,7 @@ p {
 /* Medium Sized Laptop */
 @media only screen and (min-width: 1224px) {
   .index-main {
-    padding: 0.5rem calc((100vw - 1190px) / 2);
+    padding: 0.5rem calc((100vw - 1100px) / 2);
   }
 
   h1,
@@ -149,13 +149,13 @@ p {
     position: relative;
     top: 17vh;
     left: -70px;
-    width: 600px;
-    height: 600px;
+    width: 515px;
+    height: 515px;
     z-index: -1;
   }
 
   .container {
-    margin-top: 20vh;
+    margin-top: 10vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -169,11 +169,28 @@ p {
 
 @media (min-width: 1440px) {
   .index-main{
-    padding: 0.5rem calc((100vw - 1370px) / 2);
+    padding: 0.5rem calc((100vw - 1300px) / 2);
   }
 
   .hero-image{
     width: 650px;
     height: 650px;
+    left: -10px;
+  }
+
+  .sub-heading{
+    font-size: 24px;
+  }
+
+  .hero-h1{
+    margin-top: 4vh;
+  }
+
+  .hero-text {
+    font-size: 20px;
+  }
+
+  .container{
+    margin-top: 20vh;
   }
 }
