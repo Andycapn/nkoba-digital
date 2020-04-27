@@ -13,18 +13,32 @@ const ServiceItem = props => {
     >
       <img
         css={css`
-          max-height: 52px;
-          padding: .5rem;
-          max-width: 52px;
+          padding: 0.5rem;
           border-radius: 4px;
-          box-shadow: 0px 3px 8px rgba(0,0,0,0.16);
+          box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.16);
           margin-right: 35px;
-          
+          @media screen and (min-width: 1024px) {
+            height: 45px;
+            width: 45px;
+          }
+          @media screen and (min-width: 1224px) {
+            max-height: 52px;
+            max-width: 52px;
+          }
         `}
         src={props.icon}
         alt=""
       />
-      <p>{props.text}</p>
+      <p
+        css={css`
+          @media screen and (min-width: 1024px) {
+            font-size: 14px;
+            line-height: 1.4;
+          }
+        `}
+      >
+        {props.text}
+      </p>
     </div>
   )
 }

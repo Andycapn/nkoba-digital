@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "./Styles/index.css"
-import CallToAction from "../components/call-to-action/call-to-action"
+import CallToAction from "../components/CallToAction"
 import nkobaHead from "../images/nkoba-head.svg"
 import nkobaWarrior from "../images/SVG/Asset 4.svg"
 import { css } from "@emotion/core"
@@ -44,7 +44,7 @@ const IndexPage = () => {
           </h2>
           <p className="sub-heading">
             We do more than just Visual Branding & Social Marketing. We can help
-            with the <br/> design & development of your new Idea, Product or
+            with the design & development of your new Idea, Product or
             service launch.
           </p>
           <ServiceItem
@@ -64,11 +64,15 @@ const IndexPage = () => {
           src={nkobaWarrior}
           css={css`
             display: none;
+            @media only screen and (min-width: 1024px) {
+              display: grid;
+              grid-row: 1/2;
+             width: 390px;
+             height: 500px;
+            }
             @media only screen and (min-width: 1224px) {
-            display: grid;
             width: 476px;
             height: 609px;
-            position: relative;
             grid-row: 1/2;
             z-index: -1;
             }

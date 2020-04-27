@@ -45,6 +45,56 @@ p {
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .index-main{
+    padding: 0.5rem calc((100vw - 890px)/2);
+  }
+
+  .above-fold{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hero-image{
+    display: grid;
+    grid-column: 2/3;
+    position: relative;
+    top: 10vh;
+    left: 25px;
+    width: 380px;
+    height: 380px;
+  }
+
+  .above-fold > .cta-area{
+    grid-column: 1/1;
+    margin: 0;
+  }
+
+  .hero-h1{
+    text-align: unset;
+    font-size: 40px;
+  }
+
+  .hero-text{
+    text-align: center;
+  }
+
+
+  .container {
+    margin-top: 20vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .container > aside {
+    grid-column: 2/3;
+  }
+
+
+  .sub-heading{
+    font-size: 16px;
+  }
+}
 
 
 @media only screen and (min-width: 1224px) {
