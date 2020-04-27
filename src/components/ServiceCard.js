@@ -9,13 +9,11 @@ const Card = styled.div`
   border-radius: 10px;
   margin: 2em;
   background-color: white;
-
-  @media screen and (min-width: 1224px) {
-    min-width: 370px;
-    min-height: 370px;
-    height: 370px;
+    @media screen and (min-width: 1024px) {
     width: 370px;
+    height: 370px;
   }
+
 `
 
 const ServiceCard = props => {
@@ -25,8 +23,8 @@ const ServiceCard = props => {
         css={css`
             width: 35px;
             height: 35px;
-          @media screen and (min-width: 1224px){
-            width: 50xp;
+          @media screen and (min-width: 1024px){
+            width: 50px;
             height: 50px;
           };
         `}

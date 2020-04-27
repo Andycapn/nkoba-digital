@@ -39,12 +39,16 @@ const NavLink = styled(Link)`
   margin: 0 0.5rem 0 0;
   padding: 0.7rem;
   text-decoration: none;
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+  }
 
   &.current-page {
     border-bottom: 2px solid #222;
   }
 `
 
+// Header Component
 const Header = () => {
   return (
     <header
@@ -57,17 +61,20 @@ const Header = () => {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        min-height: 7vh;
-        max-height: 7vh;
+        height: 64.54px;
         margin-bottom: 1rem;
         z-index: +1;
+
+        @media screen and (min-width: 768px) {
+          padding: 0.5rem calc((100vw - 560px) / 2);
+        }
 
         // styling for small laptops
 
         @media screen and (min-width: 1024px) {
           padding: 0.5rem calc((100vw - 890px) / 2);
         }
-        
+
         // styling for medium laptops
 
         @media screen and (min-width: 1224px) {

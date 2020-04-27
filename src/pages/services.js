@@ -36,7 +36,15 @@ const Services = () => {
         css={css`
           margin-top: 8vh;
           padding: 0.5rem calc((100vw - 345px) / 2);
-          @media only screen and (min-width: 960px) {
+
+          @media screen and (min-width: 768px) {
+            padding: 0.5rem calc((100vw - 560px) / 2);
+          }
+
+          @media screen and (min-width: 1024px) {
+            padding: 0.5rem calc((100vw - 890px) / 2);
+          }
+          @media only screen and (min-width: 1440px) {
             padding: 0.5rem calc((100vw - 1366px) / 2);
             margin-top: 13vh;
             margin-bottom: 2vh;
@@ -50,7 +58,7 @@ const Services = () => {
           `}
         >
           We offer a wide range of services crafted to bring you success and
-          bring your <br /> profitability to brand new heights.
+          bring your profitability to brand new heights.
         </p>
         <section
           css={css`
