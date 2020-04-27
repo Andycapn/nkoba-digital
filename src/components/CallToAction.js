@@ -43,6 +43,9 @@ const CallToAction = () => {
         align-items: center;
         margin-bottom: 2rem;
         max-width: 415px;
+        @media screen and (min-width: 600px) {
+          margin: 2rem auto;
+        }
         @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
           margin-left: auto;
           margin-right: auto;
