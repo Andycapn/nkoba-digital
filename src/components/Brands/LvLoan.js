@@ -15,7 +15,7 @@ const LvLoan = () => {
       }
   `)
 
-  return <Img style={{ height: "180px", width: "180px" }} fixed={data.image.sharp.fixed}/>
+  return <Img style={{ height: "150px", width: "150px" }} fixed={data.image.sharp.fixed}/>
 }
 
 export default LvLoan

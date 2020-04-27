@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const Bellezza = () => {
+const Belezza = () => {
   const data = useStaticQuery(graphql`
       query{
           image: file(relativePath: {eq: "belezza.png"}) {
@@ -15,7 +15,7 @@ const Bellezza = () => {
       }
   `)
 
-  return <Img style={{ height: "180px", width: "180px" }} fixed={data.image.sharp.fixed}/>
+  return <Img style={{ height: "150px", width: "150px" }} fixed={data.image.sharp.fixed}/>
 }
 
-export default Bellezza
+export default Belezza

@@ -5,7 +5,9 @@ import { css } from "@emotion/core"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
+// GraphQl query to fetch sharp optimized image
 const NkobaLogo = () => {
+  // Returns Optimized image from sharp
   const data = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "1.png" }) {
@@ -18,6 +20,7 @@ const NkobaLogo = () => {
     }
   `)
 
+  // Returns image to be used in Header
   return (
     <Img
       style={{ height: "4vh", width: "110px" }}
@@ -26,16 +29,16 @@ const NkobaLogo = () => {
   )
 }
 
+// Navigation Links Styling
 const NavLink = styled(Link)`
   color: #222;
   font-family: "Athiti", sans-serif;
+  font-weight: bold;
   font-size: 0.8rem;
-  font-weight: normal;
   line-height: 1;
   margin: 0 0.5rem 0 0;
   padding: 0.7rem;
   text-decoration: none;
-  font-family: sans-serif;
 
   &.current-page {
     border-bottom: 2px solid #222;
@@ -54,11 +57,28 @@ const Header = () => {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0.5rem calc((100vw - 1366px) / 2);
         min-height: 7vh;
         max-height: 7vh;
         margin-bottom: 1rem;
         z-index: +1;
+
+        // styling for small laptops
+
+        @media screen and (min-width: 1024px) {
+          padding: 0.5rem calc((100vw - 890px) / 2);
+        }
+        
+        // styling for medium laptops
+
+        @media screen and (min-width: 1224px) {
+          padding: 0.5rem calc((100vw - 1224px) / 2);
+        }
+
+        // styling for medium laptops
+
+        @media screen and (min-width: 1440px) {
+          padding: 0.5rem calc((100vw - 1366px) / 2);
+        }
       `}
     >
       <NavLink to="/">

@@ -56,7 +56,7 @@ const CallToAction = () => {
         }
 
         @media only screen and (min-width: 1224px) {
-          margin: 2rem auto;
+          margin: 2rem 0;
         }
       `}
     >

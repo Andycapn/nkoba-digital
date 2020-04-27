@@ -138,7 +138,7 @@ p {
   .hero-h1 {
     font-size: 55px;
     font-family: "Montserrat", sans-serif;
-    padding: 1rem;
+    padding-top: 1rem;
     text-align: unset;
     margin-top: unset;
   }
@@ -147,10 +147,10 @@ p {
     display: grid;
     grid-column: 2/3;
     position: relative;
-    top: 16vh;
-    right: 100px;
-    width: 500px;
-    height: 500px;
+    top: 17vh;
+    left: -70px;
+    width: 600px;
+    height: 600px;
     z-index: -1;
   }
 
@@ -167,13 +167,13 @@ p {
 
 /* High DPI Laptop view CSS */
 
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
   .index-main{
     padding: 0.5rem calc((100vw - 1370px) / 2);
   }
 
   .hero-image{
-    width: 700px;
-    height: 700px;
+    width: 650px;
+    height: 650px;
   }
 }

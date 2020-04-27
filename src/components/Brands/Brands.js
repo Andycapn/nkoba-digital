@@ -1,8 +1,8 @@
 import * as React from "react"
 import { css } from "@emotion/core"
+import Belezza from "./Belleza"
 import LvLoan from "./LvLoan"
 import LvSec from "./LvSec"
-import Bellezza from "./Bellezza"
 
 const Brands = () => {
   return (
@@ -13,7 +13,7 @@ const Brands = () => {
         box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.16);
         min-height: 700px;
        
-         @media only screen and (min-width: 1224px) {
+         @media only screen and (min-width: 1024px) {
          min-height: unset;
          }
      
@@ -28,7 +28,7 @@ const Brands = () => {
           display: flex;
           flex-direction: column;
           align-items: center;
-          @media only screen and (min-width: 1224px) {
+          @media only screen and (min-width: 1024px) {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -37,7 +37,7 @@ const Brands = () => {
       >
         <LvLoan/>
         <LvSec/>
-        <Bellezza/>
+        <Belezza/>
       </section>
     </div>
   )

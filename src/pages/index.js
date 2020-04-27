@@ -20,7 +20,7 @@ const IndexPage = () => {
       <section className={"above-fold"}>
         <section className={"hero-area"}>
           <h1 className={"hero-h1"}>
-            Digital Marketing For <br/> Forward Thinking SMEs <br/> &
+            Digital Marketing For <br/> Forward Thinking <br/> SMEs &
             Entrepreneurs.
           </h1>
           <p className={"hero-text"}>
