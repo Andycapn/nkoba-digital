@@ -61,7 +61,7 @@ const Header = () => {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 64.54px;
+        height: 7vh;
         margin-bottom: 1rem;
         z-index: +1;
 
