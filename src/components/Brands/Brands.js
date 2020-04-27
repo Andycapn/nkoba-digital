@@ -8,15 +8,19 @@ const Brands = () => {
   return (
     <div
       css={css`
+        padding: 0.5rem calc((100vw - 700px) / 2);
         background-color: #f2f2f2;
-        padding: 0.5rem calc((100vw - 1224px) / 2);
         box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.16);
         min-height: 700px;
-       
-         @media only screen and (min-width: 1024px) {
-         min-height: unset;
-         }
-     
+        @media only screen and (min-width: 768px) {
+          min-height: unset;
+        }
+        @media screen and (min-width: 1224px) {
+          padding: 0.5rem calc((100vw - 1224px) / 2);
+        }
+        @media screen and (min-width: 2560px) {
+          padding: 0.5rem calc((100vw - 2400px) / 2);
+        }
       `}
     >
       <h3 style={{ textAlign: "center", marginTop: "32px" }}>The Brands.</h3>
@@ -28,16 +32,16 @@ const Brands = () => {
           display: flex;
           flex-direction: column;
           align-items: center;
-          @media only screen and (min-width: 1024px) {
+          @media only screen and (min-width: 768px) {
             display: flex;
             flex-direction: row;
             justify-content: center;
           }
         `}
       >
-        <LvLoan/>
-        <LvSec/>
-        <Belezza/>
+        <LvLoan />
+        <LvSec />
+        <Belezza />
       </section>
     </div>
   )

@@ -17,6 +17,8 @@ const ServiceItem = props => {
           border-radius: 4px;
           box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.16);
           margin-right: 35px;
+          width: 40px;
+          height: 40px;
           @media screen and (min-width: 1024px) {
             height: 45px;
             width: 45px;
