@@ -11,7 +11,7 @@ const Brands = () => {
         padding: 0.5rem calc((100vw - 700px) / 2);
         background-color: #f2f2f2;
         box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.16);
-        min-height: 700px;
+        min-height: 400px;
         @media only screen and (min-width: 768px) {
           min-height: unset;
         }
