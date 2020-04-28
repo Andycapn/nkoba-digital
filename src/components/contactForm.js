@@ -77,8 +77,11 @@ const ContactForm = () => {
             flexDirection: "column",
             alignItems: "center",
           }}
-          netlify
+          name="Contact form"
+          method="POST"
+          data-netlify="true"
         >
+          <input type="hidden" name="form-name" value="Contact Form" />
           <FormInput type="text" name="first_name" placeholder="First Name" />
           <FormInput type="text" name="last_name" placeholder="Last Name" />
           <FormInput type="email" name="email" placeholder="Email Address" />
