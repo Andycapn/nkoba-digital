@@ -50,7 +50,7 @@ const IndexPage = () => {
             >
               Conquer your competition with marketing that works
             </h2>
-            <p className="sub-heading">
+            <p className="sub-heading, sub-text">
               We do more than just Visual Branding & Social Marketing. We can
               help with the design & development of your new Idea, Product or
               service launch.

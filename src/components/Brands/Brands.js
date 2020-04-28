@@ -8,11 +8,12 @@ const Brands = () => {
   return (
     <div
       css={css`
-        padding: 0.5rem calc((100vw - 700px) / 2);
+        padding: 0.5rem calc((100vw - 340px) / 2);
         background-color: #f2f2f2;
         box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.16);
         min-height: 400px;
         @media only screen and (min-width: 768px) {
+          padding: 0.5rem calc((100vw - 700px) / 2);
           min-height: unset;
         }
         @media screen and (min-width: 1224px) {

@@ -10,6 +10,7 @@ p {
 }
 
 .hero-h1 {
+  margin-top: 3vh;
   text-align: center;
 }
 
@@ -19,17 +20,24 @@ p {
 
 .index-main {
   margin-top: 8vh;
-  padding: 0.5rem calc((100vw - 345px) / 2);
+  padding: 0.5rem calc((100vw - 335px) / 2);
 }
 
 .hero-text{
   text-align: center;
-  font-size: 17px;
-  margin: 2em 0 ;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 3em 0 ;
 }
 
 .sub-heading{
   text-align: center;
+}
+
+.sub-text{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .container{
@@ -201,5 +209,9 @@ p {
 
   .container{
     margin-top: 20vh;
+  }
+
+  .sub-text{
+    font-size: 20px;
   }
 }
