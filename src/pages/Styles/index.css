@@ -30,6 +30,8 @@ p {
   text-align: center;
 }
 
+
+
 @media screen and (min-width: 415px) {
   .index-main{
   padding: 0.5rem calc((100vw - 415px) / 2);

@@ -20,32 +20,53 @@ const About = () => (
         h2 {
           font-size: 24px;
         }
-        
-        margin-top: 8vh;
-        padding: 0.5rem calc((100vw - 330px)/2);
 
-        @media only screen and (min-width: 960px) {
-          padding: 0.5rem calc((100vw - 1366px) / 2);
-          margin-top: 13vh;
-          margin-bottom: 2vh;
+        margin-top: 8vh;
+        padding: 0.5rem calc((100vw - 330px) / 2);
+
+        // Tablet Styling
+        @media only screen and (min-width: 768px) {
+          padding: 0.5rem calc((100vw - 650px) / 2);
+          line-height: 1.2;
+        }
+
+        //Small Laptop Styling
+        @media only screen and (min-width: 1024px) {
+          padding: 0.5rem calc((100vw - 890px) / 2);
+          line-height: 1.5;
           display: grid;
-          grid-template-columns: 2fr 1fr;
-          p, h2{
-            text-align: unset;
-          }
+          grid-template-columns: 2fr 2fr;
+          grid-gap: 5rem;
+
           .warrior-image {
             display: grid;
           }
         }
+
+        @media only screen and (min-width: 1280px) {
+          padding: 0.5rem calc((100vw - 1170px));
+        }
+
+        @media only screen and (min-width: 1440px) {
+          padding: 0.5rem calc((100vw - 1366px) / 2);
+          grid-gap: 15em;
+          margin-top: 13vh;
+          margin-bottom: 2vh;
+
+          p,
+          h2 {
+            text-align: unset;
+          }
+        }
       `}
     >
-      <section style={{ paddingRight: "5em" }}>
+      <section>
         <h1>About Us</h1>
         <h2>Our Mission</h2>
         <p>
           From the Zulu word that means to Conquer, Nqoba, We derived our own
-          name as our goal is to <br /> help you conquer your competition and
-          dominate your markets.
+          name as our goal is to help you conquer your competition and dominate
+          your markets.
         </p>
         <p>
           Nkoba Digital is a digital marketing agency created to support SMEs,
@@ -76,7 +97,10 @@ const About = () => (
       <section>
         <img
           className="warrior-image"
-          style={{ height: "919px", width: "335px"}}
+          css={css`
+            min-height: 797px;
+            min-width: 291px;
+          `}
           src={Warrior}
           alt=""
         />

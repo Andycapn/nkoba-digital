@@ -35,7 +35,7 @@ const Services = () => {
         fluid={image.sharp.fluid}
         css={css`
           margin-top: 8vh;
-          padding: 0.5rem calc((100vw - 345px) / 2);
+          padding: 0.5rem calc((100vw - 335px) / 2);
 
           @media screen and (min-width: 768px) {
             padding: 0.5rem calc((100vw - 560px) / 2);
@@ -43,6 +43,10 @@ const Services = () => {
 
           @media screen and (min-width: 1024px) {
             padding: 0.5rem calc((100vw - 890px) / 2);
+          }
+
+          @media screen and (min-width: 1280px) {
+            padding: 0.5rem calc((100vw - 1090px) / 2);
           }
           @media only screen and (min-width: 1440px) {
             padding: 0.5rem calc((100vw - 1366px) / 2);
