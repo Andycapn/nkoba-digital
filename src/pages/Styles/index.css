@@ -30,7 +30,10 @@ p {
   text-align: center;
 }
 
-
+.container{
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
 
 @media screen and (min-width: 415px) {
   .index-main{
