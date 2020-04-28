@@ -24,6 +24,8 @@ p {
 
 .hero-text{
   text-align: center;
+  font-size: 17px;
+  margin: 2em 0 ;
 }
 
 .sub-heading{
@@ -35,6 +37,7 @@ p {
   margin-bottom: 5em;
 }
 
+/* Styling for large phones */
 @media screen and (min-width: 415px) {
   .index-main{
   padding: 0.5rem calc((100vw - 415px) / 2);
@@ -192,6 +195,7 @@ p {
   }
 
   .hero-text {
+    text-align: unset;
     font-size: 20px;
   }
 
