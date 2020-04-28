@@ -54,7 +54,7 @@ p {
 
 @media (min-width: 600px) {
   .index-main{
-    padding: 0.5rem calc((100vw - 560px) / 2);
+    padding: 0.5rem calc((100vw - 600px) / 2);
   }
   .hero-text{
     text-align: center;

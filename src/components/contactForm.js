@@ -3,7 +3,7 @@ import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 
 const FormInput = styled.input`
-  width: 400px;
+  width: 290px;
   border: none;
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -11,10 +11,19 @@ const FormInput = styled.input`
   padding: 0.5rem 1rem;
   font-family: "Athiti", sans-serif;
   margin: 0.7rem 0;
+  @media screen and (min-width: 768px) {
+    width: 500px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 600px;
+  }
 `
 
 const FormText = styled.textarea`
-  width: 400px;
+  width: 290px;
   border: none;
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -23,7 +32,17 @@ const FormText = styled.textarea`
   padding: 0.5rem 1rem;
   font-family: "Athiti", sans-serif;
   box-sizing: border-box;
-  height: 425px;
+  height: 250px;
+  @media screen and (min-width: 768px) {
+    width: 500px;
+    height: 425px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 600px;
+  }
 `
 
 const Button = styled.button`
@@ -39,17 +58,17 @@ const Button = styled.button`
 
 const ContactForm = () => {
   return (
-    <section
-      css={css`
-        
-      `}
-    >
+    <section css={css``}>
       <div
         css={css`
-          height: 800px;
           box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.16);
+          width: fit-content;
           border-radius: 5px;
           padding: 2rem;
+          margin: auto;
+          @media screen and (min-width: 1440px) {
+            margin: unset;
+          }
         `}
       >
         <form

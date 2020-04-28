@@ -66,7 +66,7 @@ const Header = () => {
         z-index: +1;
 
         @media screen and (min-width: 768px) {
-          padding: 0.5rem calc((100vw - 560px) / 2);
+          padding: 0.5rem calc((100vw - 600px) / 2);
         }
 
         // styling for small laptops
