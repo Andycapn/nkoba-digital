@@ -77,6 +77,7 @@ const ContactForm = () => {
             flexDirection: "column",
             alignItems: "center",
           }}
+          netlify
         >
           <FormInput type="text" name="first_name" placeholder="First Name" />
           <FormInput type="text" name="last_name" placeholder="Last Name" />
