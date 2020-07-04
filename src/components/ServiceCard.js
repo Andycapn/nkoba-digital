@@ -49,7 +49,7 @@ const ServiceCard = props => {
         src={props.icon}
         alt=""
       />
-      <h3 style={{ fontSize: "16px" }}>{props.title}</h3>
+      <h3 style={{ fontWeight: "bold", fontSize: "16px" }}>{props.title}</h3>
       <p style={{ fontSize: "14px", fontWeight: "500" }}>{props.desc}</p>
     </Card>
   )

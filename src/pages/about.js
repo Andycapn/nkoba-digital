@@ -3,6 +3,13 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { css } from "@emotion/core"
 import Warrior from "../images/SVG/Asset 3.svg"
+import styled from "@emotion/styled"
+
+const Header = styled.h1`
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0.25em;
+`
 
 const About = () => (
   <Layout>
@@ -20,8 +27,7 @@ const About = () => (
         h2 {
           font-size: 24px;
         }
-
-        margin-top: 8vh;
+        margin-top: 1vh;
         padding: 0.5rem calc((100vw - 330px) / 2);
 
         // Tablet Styling
@@ -50,7 +56,7 @@ const About = () => (
         @media only screen and (min-width: 1440px) {
           padding: 0.5rem calc((100vw - 1366px) / 2);
           grid-gap: 15em;
-          margin-top: 13vh;
+
           margin-bottom: 2vh;
 
           p,
@@ -61,7 +67,7 @@ const About = () => (
       `}
     >
       <section>
-        <h1>About Us</h1>
+        <Header>About Us</Header>
         <h2>Our Mission</h2>
         <p>
           From the Zulu word that means to Conquer, Nqoba, We derived our own

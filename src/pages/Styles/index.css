@@ -10,8 +10,9 @@ p {
 }
 
 .hero-h1 {
-  margin-top: 3vh;
+
   text-align: center;
+  font-weight: bold;
 }
 
 .hero-image {
@@ -19,7 +20,7 @@ p {
 }
 
 .index-main {
-  margin-top: 8vh;
+
   padding: 0.5rem calc((100vw - 335px) / 2);
 }
 

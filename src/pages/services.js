@@ -14,6 +14,12 @@ const ImageBackground = styled(BackgroundImage)`
   background-repeat: no-repeat;
 `
 
+const Header = styled.h1`
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0.25em;
+`
+
 const Services = () => {
   const { image } = useStaticQuery(graphql`
     query {
@@ -34,7 +40,7 @@ const Services = () => {
         tag="section"
         fluid={image.sharp.fluid}
         css={css`
-          margin-top: 8vh;
+          margin-top: 1vh;
           padding: 0.5rem calc((100vw - 335px) / 2);
 
           @media screen and (min-width: 768px) {
@@ -50,12 +56,11 @@ const Services = () => {
           }
           @media only screen and (min-width: 1440px) {
             padding: 0.5rem calc((100vw - 1366px) / 2);
-            margin-top: 13vh;
             margin-bottom: 2vh;
           }
         `}
       >
-        <h1>Services</h1>
+        <Header>Services</Header>
         <p
           css={css`
             font-weight: 500;

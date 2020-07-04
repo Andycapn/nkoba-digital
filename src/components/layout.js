@@ -3,6 +3,7 @@ import Header from "./header"
 import "./layout.css"
 import Footer from "./footer"
 import LearnMore from "./learnMore"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Layout = ({ children }) => {
   return (
