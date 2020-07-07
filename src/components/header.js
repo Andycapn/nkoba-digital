@@ -29,7 +29,7 @@ const NkobaLogo = () => {
   // Returns image to be used in Header
   return (
     <Img
-      style={{ height: "4vh", width: "110px" }}
+      style={{ height: "1.1em", width: "110px" }}
       fixed={data.image.sharp.fixed}
     />
   )

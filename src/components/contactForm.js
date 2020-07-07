@@ -1,6 +1,7 @@
 import * as React from "react"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
+import { useState } from "react"
 
 const FormInput = styled.input`
   width: 290px;
@@ -57,6 +58,42 @@ const Button = styled.button`
 `
 
 const ContactForm = () => {
+  // Setting Initial Form State
+  const [formState, setFormState] = useState({
+    firstName: "",
+    lastName: "",
+    emailAddress: "",
+    message: "",
+  })
+
+  // URI Encode data
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
+
+  //On Change Handler for Form State
+  const handleChange = e => {
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value,
+    })
+  }
+
+  //Submit Handler for the form
+  const handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...formState }),
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error))
+
+    e.preventDefault()
+  }
+
   return (
     <section css={css``}>
       <div
@@ -77,21 +114,43 @@ const ContactForm = () => {
             flexDirection: "column",
             alignItems: "center",
           }}
-          name="Contact form"
+          name="contact"
+          onSubmit={handleSubmit}
           method="POST"
           data-netlify="true"
+          data-netlify-honeypot="bot-field"
         >
-          <input type="hidden" name="form-name" value="Contact Form" />
-          <FormInput type="text" name="first_name" placeholder="First Name" />
-          <FormInput type="text" name="last_name" placeholder="Last Name" />
-          <FormInput type="email" name="email" placeholder="Email Address" />
+          <input type="hidden" name="form-name" value="contact" />
+          <FormInput
+            type="text"
+            name="firstName"
+            onChange={handleChange}
+            value={formState.firstName}
+            placeholder="First Name"
+          />
+          <FormInput
+            type="text"
+            name="lastName"
+            onChange={handleChange}
+            value={formState.lastName}
+            placeholder="Last Name"
+          />
+          <FormInput
+            type="email"
+            name="emailAddress"
+            onChange={handleChange}
+            value={formState.emailAddress}
+            placeholder="Email Address"
+          />
           <FormText
-            name=""
+            name="message"
             id=""
             cols="30"
             rows="50"
             placeholder="Message"
-          ></FormText>
+            onChange={handleChange}
+            value={formState.message}
+          />
           <Button type="submit">Submit</Button>
         </form>
       </div>
