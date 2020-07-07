@@ -11,30 +11,6 @@ import Form from "react-bootstrap/Form"
 import FormControl from "react-bootstrap/FormControl"
 import Button from "react-bootstrap/Button"
 
-// GraphQl query to fetch sharp optimized image
-const NkobaLogo = () => {
-  // Returns Optimized image from sharp
-  const data = useStaticQuery(graphql`
-    query {
-      image: file(relativePath: { eq: "1.png" }) {
-        sharp: childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed_withWebp
-          }
-        }
-      }
-    }
-  `)
-
-  // Returns image to be used in Header
-  return (
-    <Img
-      style={{ height: "1.1em", width: "110px" }}
-      fixed={data.image.sharp.fixed}
-    />
-  )
-}
-
 // Navigation Links Styling
 const NavLink = styled(Link)`
   color: #222;
@@ -62,6 +38,20 @@ const NavLink = styled(Link)`
 
 // Header Component
 const Header = () => {
+  // GraphQl query to fetch sharp optimized image
+  // Returns Optimized image from sharp
+  const { image } = useStaticQuery(graphql`
+    query {
+      image: file(relativePath: { eq: "1.png" }) {
+        sharp: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <>
       <Navbar
@@ -83,8 +73,18 @@ const Header = () => {
           }
         `}
       >
-        <Link to="/" className="navbar-brand">
-          <NkobaLogo />
+        <Link
+          css={css`
+            width: 110px;
+          `}
+          to="/"
+          className="navbar-brand"
+        >
+          <img
+            style={{ objectFit: "fill", margin: "-100px 0" }}
+            src={image.sharp.fluid.srcWebp}
+            alt=""
+          />
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
