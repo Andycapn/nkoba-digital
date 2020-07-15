@@ -46,42 +46,6 @@ const ExternalLink = styled.a`
 `
 
 const Footer = () => {
-  // Setting initial form state.
-  const [formState, setFormState] = useState({
-    emailAddress: "",
-  })
-
-  // URI Encode data
-  const encode = data => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&")
-  }
-
-  //On Change Handler for Form State
-  const handleChange = e => {
-    setFormState({
-      ...formState,
-      [e.target.name]: e.target.value,
-    })
-  }
-
-  //Submit Handler for the form
-  const handleSubmit = e => {
-    fetch(
-      "https://send.pageclip.co/z2YIouuUsGQMSNfigkiq9BBEZvMg44dj/Newsletter",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ ...formState }),
-      }
-    )
-      .then(() => alert("We've got your Message!"))
-      .catch(error => alert(error))
-
-    e.preventDefault()
-  }
-
   return (
     <footer
       css={css`
@@ -214,9 +178,8 @@ const Footer = () => {
               border: none;
             `}
             type="email"
-            name="emailAddress"
+            name="email"
             placeholder="Email Address"
-            onChange={handleChange}
           />
           <button
             css={css`
