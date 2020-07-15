@@ -3,6 +3,7 @@ import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
 import icons from "./icons"
+import { useState } from "react"
 
 const FooterLink = styled(Link)`
   color: #f2f2f2;
@@ -13,7 +14,11 @@ const FooterLink = styled(Link)`
   margin: 0 0.5rem 0 0;
   padding: 0.7rem;
   text-decoration: none;
-  font-family: sans-serif;
+  transition: 200ms ease-in;
+  &:hover {
+    text-decoration: none;
+    color: #999999;
+  }
 `
 
 const ExternalLink = styled.a`
@@ -25,18 +30,58 @@ const ExternalLink = styled.a`
   margin: 0 0.5rem 0 0;
   padding: 0.7rem;
   text-decoration: none;
-  font-family: sans-serif;
+  transition: 200ms ease-in;
+  &:hover {
+    text-decoration: none;
+    color: #999999;
+  }
   @media (min-width: 998px) {
     font-size: 12px;
     line-height: 1;
   }
-  
+
   @media (min-width: 1400px) {
     font-size: 14px;
   }
 `
 
 const Footer = () => {
+  // Setting initial form state.
+  const [formState, setFormState] = useState({
+    emailAddress: "",
+  })
+
+  // URI Encode data
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
+
+  //On Change Handler for Form State
+  const handleChange = e => {
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value,
+    })
+  }
+
+  //Submit Handler for the form
+  const handleSubmit = e => {
+    fetch(
+      "https://send.pageclip.co/z2YIouuUsGQMSNfigkiq9BBEZvMg44dj/Newsletter",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ ...formState }),
+      }
+    )
+      .then(() => alert("We've got your Message!"))
+      .catch(error => alert(error))
+
+    e.preventDefault()
+  }
+
   return (
     <footer
       css={css`
@@ -57,7 +102,7 @@ const Footer = () => {
         @media (min-width: 998px) {
           padding: 0.5rem calc((100vw - 900px) / 2);
         }
-        
+
         @media (min-width: 1400px) {
           padding: 2rem calc((100vw - 1366px) / 2);
         }
@@ -137,11 +182,12 @@ const Footer = () => {
       >
         <p
           css={css`
-            @media (min-width: 998px) {
+            font-weight: bold;
+            @media (min-width: 768px) {
               font-size: 12px;
             }
             @media (min-width: 1400px) {
-              font-size: 16px;
+              font-size: 18px;
             }
           `}
         >
@@ -153,6 +199,9 @@ const Footer = () => {
             border: 1px solid #f2f2f2;
             border-radius: 5px;
           `}
+          onSubmit={handleSubmit}
+          method="POST"
+          className="pageclip-form"
         >
           <input
             css={css`
@@ -165,7 +214,9 @@ const Footer = () => {
               border: none;
             `}
             type="email"
+            name="emailAddress"
             placeholder="Email Address"
+            onChange={handleChange}
           />
           <button
             css={css`
@@ -231,8 +282,21 @@ const Footer = () => {
           text-align: center;
         `}
       >
-        &copy; Nkoba Digital {new Date().getFullYear()}. Design by Andrew
-        Ndhlovu, Axon Zambia.
+        &copy; Nkoba Digital {new Date().getFullYear()}. Design by{" "}
+        <a
+          css={css`
+            color: #c4c4c4;
+            transition: 200ms ease-in;
+            &:hover {
+              text-decoration: none;
+              color: #999999;
+            }
+          `}
+          href="https://andrewndhlovu.tech"
+        >
+          Andrew Ndhlovu
+        </a>
+        , Axon Zambia.
       </p>
     </footer>
   )

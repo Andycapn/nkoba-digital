@@ -3,13 +3,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import Navbar from "react-bootstrap/Navbar"
-import Nav from "react-bootstrap/Nav"
-import NavDropdown from "react-bootstrap/NavDropdown"
-import Form from "react-bootstrap/Form"
-import FormControl from "react-bootstrap/FormControl"
-import Button from "react-bootstrap/Button"
+import { Navbar, Nav } from "react-bootstrap"
 
 // Navigation Links Styling
 const NavLink = styled(Link)`
@@ -82,7 +76,7 @@ const Header = () => {
         >
           <img
             style={{ objectFit: "fill", margin: "-100px 0" }}
-            src={image.sharp.fluid.srcWebp}
+            src={image.sharp.fluid.src}
             alt=""
           />
         </Link>

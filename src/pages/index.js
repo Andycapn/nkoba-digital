@@ -16,11 +16,6 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <main className="index-main">
-        {/*This section exists for styling purposes.
-         *  I couldn't figure out how to do it properly.
-         *  Too lazy to change it now
-         */}
-
         <section className={"above-fold"}>
           <section className={"hero-area"}>
             <h1 className={"hero-h1"}>
