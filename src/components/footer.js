@@ -199,7 +199,7 @@ const Footer = () => {
             border: 1px solid #f2f2f2;
             border-radius: 5px;
           `}
-          onSubmit={handleSubmit}
+          action="https://send.pageclip.co/z2YIouuUsGQMSNfigkiq9BBEZvMg44dj/Newsletter"
           method="POST"
           className="pageclip-form"
         >
@@ -227,8 +227,9 @@ const Footer = () => {
               background-color: #f2f2f2;
             `}
             type="submit"
+            className="pageclip-form__submit"
           >
-            Ok
+            <span>Ok</span>
           </button>
         </form>
       </section>
